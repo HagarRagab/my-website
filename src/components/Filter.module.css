@@ -1,0 +1,20 @@
+.filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.filter li.active {
+    background-color: var(--transparent-blue-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 5px;
+    box-shadow: var(--shadow-md);
+}
+
+.filter button {
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: capitalize;
+}

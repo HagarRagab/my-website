@@ -1,0 +1,51 @@
+.education {
+    min-height: 100vh;
+    color: var(--main-font-color);
+}
+
+.education h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.education main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    .education main {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+}
+
+.education main > div {
+    max-width: 28rem;
+    margin-left: 4.4rem;
+}
+
+.education main > figure {
+    width: 100%;
+    max-width: 28rem;
+    aspect-ratio: 64/69;
+    margin-inline: auto;
+}
+
+@media (max-width: 768px) {
+    .education main > figure {
+        max-width: 24rem;
+        grid-row: 1 / 2;
+    }
+}
+
+.education main > figure * {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.education button {
+    margin: 1rem;
+}

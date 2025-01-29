@@ -1,0 +1,25 @@
+.button {
+    padding: 0.8rem 1.6rem;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border: var(--border-md) solid var(--yellow-color);
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    transition: transform var(--transition-duration);
+    box-shadow: var(--shadow-md);
+}
+
+.button:hover,
+.button:focus {
+    transform: translateY(-0.2rem);
+}
+
+.filled {
+    background-color: var(--yellow-color);
+    color: var(--main-font-color);
+}
+
+.outlined {
+    color: var(--yellow-color);
+}

@@ -1,0 +1,11 @@
+.bullet * {
+    width: 1rem;
+    height: 1rem;
+    border: var(--border-md) solid var(--yellow-color);
+    border-radius: 50%;
+    box-shadow: var(--shadow-lg);
+}
+
+.bullet .active {
+    background-color: var(--yellow-color);
+}

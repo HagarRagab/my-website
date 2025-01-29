@@ -1,0 +1,13 @@
+User-agent: *
+Disallow:
+
+# Block specific paths
+Disallow: /node_modules/
+Disallow: /private/
+Disallow: /temp/
+
+Disallow: /dist/
+
+Disallow: /api/
+
+Sitemap: https://www.hagar.ragab.saad.netlify.app/sitemap.xml

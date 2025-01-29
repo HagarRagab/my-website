@@ -1,0 +1,21 @@
+.buttonsIcon {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 2rem;
+}
+
+.buttonsIcon a {
+    transition: transform var(--transition-duration);
+}
+
+.buttonsIcon a:hover,
+.buttonsIcon a:focus {
+    transform: translateY(-0.2rem);
+}
+
+.buttonsIcon svg {
+    width: 1.4rem;
+    height: 1.4rem;
+    fill: var(--main-font-color);
+}

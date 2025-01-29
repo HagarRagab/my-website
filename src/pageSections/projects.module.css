@@ -1,0 +1,82 @@
+.projects {
+    min-height: 100vh;
+    color: var(--main-font-color);
+}
+
+.projects header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 3rem 1.4rem;
+}
+
+@media (max-width: 576px) {
+    .projects header {
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 1rem 1rem;
+    }
+}
+
+.projects h2 {
+    width: 7rem;
+}
+
+@media (max-width: 576px) {
+    .projects h2 {
+        width: fit-content;
+        margin-bottom: 1rem;
+    }
+}
+
+.projects h2 span {
+    color: var(--yellow-color);
+}
+
+.projects main {
+    position: relative;
+}
+
+.projects main > button {
+    position: absolute;
+}
+
+@media (max-width: 768px) {
+    .projects main > button {
+        display: none;
+    }
+}
+
+.projects main > button svg {
+    fill: var(--yellow-color);
+    font-weight: 900;
+}
+
+.projects main > button:disabled svg {
+    opacity: 0.5;
+}
+
+.projects main > button:first-of-type {
+    left: 1rem;
+    top: 50%;
+}
+
+.projects main > button:last-of-type {
+    right: 1rem;
+    top: 50%;
+}
+
+.projects main > div {
+    min-height: 30rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: 1rem;
+    margin: 0 3rem 2rem;
+}
+
+@media (max-width: 768px) {
+    .projects main > div {
+        margin: 0 1rem 2rem;
+        grid-template-columns: 1fr;
+    }
+}

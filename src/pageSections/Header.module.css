@@ -1,0 +1,13 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.8rem 1.8rem 0;
+}
+
+.header img {
+    width: 5rem;
+    aspect-ratio: 68/41;
+    object-fit: contain;
+}

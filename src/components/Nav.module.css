@@ -1,0 +1,8 @@
+.active {
+    border-right: var(--border-md) solid var(--yellow-color);
+    color: var(--yellow-color);
+}
+
+.active svg {
+    fill: var(--yellow-color);
+}

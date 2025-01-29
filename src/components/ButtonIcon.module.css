@@ -1,0 +1,9 @@
+.buttonIcon {
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-inline: 0.8rem;
+}
+
+.buttonIcon:hover svg {
+    fill: var(--yellow-color);
+}

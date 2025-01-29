@@ -1,0 +1,17 @@
+.navigationBullets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+@media (max-width: 576px) {
+    .navigationBullets {
+        flex-wrap: wrap;
+    }
+}
+
+.navigationBullets button {
+    width: 0.9rem;
+    height: 0.9rem;
+}

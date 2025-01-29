@@ -1,0 +1,11 @@
+.footer {
+    background-color: var(--yellow-color);
+    color: var(--main-color);
+    padding: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.footer span {
+    color: var(--main-font-color);
+}
