@@ -10,4 +10,4 @@ Disallow: /dist/
 
 Disallow: /api/
 
-Sitemap: https://www.hagar.ragab.saad.netlify.app/sitemap.xml
+Sitemap: https://www.hagar-ragab.netlify.app/sitemap.xml

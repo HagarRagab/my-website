@@ -36,25 +36,21 @@ function Contact({ isDarkMood }) {
         else {
             toast.promise(
                 async () => {
-                    // await emailjs.send(
-                    //     process.env.REACT_APP_EMAILJS_SERVICE_ID,
-                    //     process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-                    //     {
-                    //         user_name: name,
-                    //         user_email: email,
-                    //         message: message,
-                    //     },
-                    //     process.env.REACT_APP_EMAILJS_PUBLIC_KEY
-                    // );
-                    await fetch("./netlify/functions/send_email", {
-                        method: "POST",
-                        body: JSON.stringify({
-                            user_name: name,
-                            user_email: email,
-                            message: message,
-                        }),
-                    });
-                    reset();
+                    try {
+                        await emailjs.send(
+                            import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                            import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+                            {
+                                user_name: name,
+                                user_email: email,
+                                message: message,
+                            },
+                            import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+                        );
+                        reset();
+                    } catch (error) {
+                        console.log(error);
+                    }
                 },
                 {
                     loading: "Waiting...",

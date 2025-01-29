@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useMatchMedia } from "../hooks/useMatchMedia";
 import styles from "./NavBar.module.css";
 import MenuLeft from "../assets/icons/menu-left.svg?react";
-import MenuRight from "../assets/icons/menu-Right.svg?react";
+import MenuRight from "../assets/icons/menu-right.svg?react";
 import Moon from "../assets/icons/moon.svg?react";
 import Sun from "../assets/icons/sun.svg?react";
 import ButtonIcon from "./ButtonIcon";
