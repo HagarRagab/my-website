@@ -37,7 +37,7 @@ function Contact({ isDarkMood }) {
             toast.promise(
                 async () => {
                     try {
-                        await emailjs.send(
+                        const res = await emailjs.send(
                             import.meta.env.VITE_EMAILJS_SERVICE_ID,
                             import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
                             {
@@ -47,9 +47,12 @@ function Contact({ isDarkMood }) {
                             },
                             import.meta.env.VITE_EMAILJS_PUBLIC_KEY
                         );
+
+                        if (!res.ok) throw new Error("Failed to send email");
                         reset();
                     } catch (error) {
                         console.log(error);
+                        throw new Error(error.message);
                     }
                 },
                 {
