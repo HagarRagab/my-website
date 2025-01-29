@@ -47,6 +47,7 @@ function Contact({ isDarkMood }) {
                             },
                             import.meta.env.VITE_EMAILJS_PUBLIC_KEY
                         );
+                        console.log(res);
 
                         if (!res.ok) throw new Error("Failed to send email");
                         reset();
