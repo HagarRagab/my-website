@@ -14,6 +14,7 @@ function Projects() {
     const [page, setPage] = useState(1);
     const matches = useMatchMedia("(max-width: 768px)");
     const projectsPerPage = matches ? 3 : 6;
+    console.log(matches);
 
     const sortedProjects =
         sortBy !== "all"

@@ -9,7 +9,7 @@
     background-color: var(--transparent-blue-color);
     padding: 0.3rem 0.8rem;
     border-radius: 5px;
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-sm);
 }
 
 .filter button {
