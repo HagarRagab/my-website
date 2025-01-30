@@ -22,7 +22,7 @@ function Contact({ isDarkMood }) {
 
     const filter = new Filter();
 
-    function onSubmit(data) {
+    async function onSubmit(data) {
         const { name, email, message } = data;
 
         const urlPattern =
@@ -47,9 +47,9 @@ function Contact({ isDarkMood }) {
                             },
                             import.meta.env.VITE_EMAILJS_PUBLIC_KEY
                         );
-                        console.log(res);
 
-                        if (!res.ok) throw new Error("Failed to send email");
+                        if (res.status !== 200)
+                            throw new Error("Failed to send email");
                         reset();
                     } catch (error) {
                         console.log(error);
