@@ -1,3 +1,4 @@
+import { useScroll, useTransform, motion } from "framer-motion";
 import styles from "./Home.module.css";
 import Button from "../components/Button";
 import ButtonsIcon from "../components/ButtonsIcon";
@@ -26,6 +27,10 @@ const homeImgs = {
 function Home({ isDarkMood }) {
     const { src, mobSrc, alt } = homeImgs[isDarkMood ? "dark" : "light"];
     const matches = useMatchMedia("(max-width: 768px)");
+    const { scrollY } = useScroll();
+    const xText = useTransform(scrollY, [0, 300, 500], [0, -100, -500]);
+    const xPicture = useTransform(scrollY, [0, 300, 500], [0, 100, 500]);
+    const opacity = useTransform(scrollY, [0, 300, 500], [1, 0.8, 0]);
 
     useEffect(() => {
         const link = document.createElement("link");
@@ -40,7 +45,7 @@ function Home({ isDarkMood }) {
 
     return (
         <Section id="home" className={styles.home}>
-            <div className={styles.text}>
+            <motion.div className={styles.text} style={{ x: xText, opacity }}>
                 <h1>Hi, I’m Hagar Ragab</h1>
                 <h2>Frontend Developer</h2>
                 <p>
@@ -58,12 +63,12 @@ function Home({ isDarkMood }) {
                     </Button>
                 </div>
                 <ButtonsIcon />
-            </div>
-            <picture>
+            </motion.div>
+            <motion.picture style={{ x: xPicture, opacity }}>
                 <source srcSet={mobSrc} media="(max-width: 768px)" />
                 <source srcSet={src} />
                 <img src={src} alt={alt} />
-            </picture>
+            </motion.picture>
         </Section>
     );
 }

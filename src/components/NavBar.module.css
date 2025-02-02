@@ -76,15 +76,13 @@
 }
 
 .openedMenu {
-    opacity: 0;
-    width: 0;
+    width: 13rem;
     height: 85vh;
     max-height: 45rem;
     background-color: var(--main-color);
     color: var(--main-font-color);
     text-wrap: nowrap;
-    padding-block: 1.8rem;
-    padding-inline: 0;
+    padding: 1.8rem 0.9rem 1.8rem 3rem;
     position: fixed;
     top: 50%;
     left: 3.3rem;
@@ -93,14 +91,7 @@
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
     transition: var(--transition-duration);
-    pointer-events: none;
-}
-
-.openedMenu.open {
-    width: 13rem;
-    opacity: 1;
-    padding-inline: 3rem 0.9rem;
-    pointer-events: all;
+    overflow: hidden;
 }
 
 .openedMenu button {
@@ -118,7 +109,7 @@
     display: none;
 }
 
-.openedMenu.open ul {
+.openedMenu ul {
     pointer-events: all;
     display: block;
 }

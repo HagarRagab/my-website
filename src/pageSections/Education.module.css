@@ -24,6 +24,18 @@
 .education main > div {
     max-width: 28rem;
     margin-left: 4.4rem;
+    position: relative;
+}
+
+.education main > div::before {
+    content: "";
+    width: 2px;
+    height: calc(100% - 5rem);
+    background-color: var(--yellow-color);
+    position: absolute;
+    left: -1.9rem;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .education main > figure {

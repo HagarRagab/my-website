@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useMatchMedia } from "../hooks/useMatchMedia";
+import { motion, AnimatePresence } from "framer-motion";
 import styles from "./NavBar.module.css";
 import MenuLeft from "../assets/icons/menu-left.svg?react";
 import MenuRight from "../assets/icons/menu-right.svg?react";
@@ -43,19 +44,28 @@ function NavBar({ onChangeMood, isDarkMood }) {
                     {isDarkMood ? <Sun /> : <Moon />}
                 </ButtonIcon>
             </nav>
-            <nav
-                className={`${styles.openedMenu} ${
-                    isMenuOpened && device === "desktop" ? styles.open : ""
-                }`}
-            >
-                <ButtonIcon
-                    onClick={() => setIsMenuOpened(false)}
-                    ariaLabel="Close menu"
-                >
-                    <MenuRight />
-                </ButtonIcon>
-                <Nav childrenType="title" />
-            </nav>
+            <AnimatePresence>
+                {isMenuOpened && device === "desktop" && (
+                    <motion.nav
+                        className={styles.openedMenu}
+                        initial={{ opacity: 0, width: 0 }}
+                        animate={{
+                            opacity: 1,
+                            width: "13rem",
+                        }}
+                        exit={{ opacity: 0, width: 0 }}
+                        transition={{ duration: 0.3, type: "spring" }}
+                    >
+                        <ButtonIcon
+                            onClick={() => setIsMenuOpened(false)}
+                            ariaLabel="Close menu"
+                        >
+                            <MenuRight />
+                        </ButtonIcon>
+                        <Nav childrenType="title" />
+                    </motion.nav>
+                )}
+            </AnimatePresence>
         </>
     );
 }

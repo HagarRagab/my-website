@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { useMatchMedia } from "../hooks/useMatchMedia";
 import { projects } from "../projects";
 import styles from "./Projects.module.css";
@@ -14,7 +15,6 @@ function Projects() {
     const [page, setPage] = useState(1);
     const matches = useMatchMedia("(max-width: 768px)");
     const projectsPerPage = matches ? 3 : 6;
-    console.log(matches);
 
     const sortedProjects =
         sortBy !== "all"

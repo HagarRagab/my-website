@@ -13,6 +13,7 @@ import Npm from "./assets/icons/npm.svg?react";
 import React from "./assets/icons/react.svg?react";
 import ReactRouter from "./assets/icons/react-router.svg?react";
 import Redux from "./assets/icons/redux.svg?react";
+import FramerMotion from "./assets/icons/framermotion.svg?react";
 import Git from "./assets/icons/git.svg?react";
 import GitHub from "./assets/icons/github.svg?react";
 import Netlify from "./assets/icons/netlify.svg?react";
@@ -38,6 +39,7 @@ export const techIcons = [
     <React />,
     <ReactRouter />,
     <Redux />,
+    <FramerMotion />,
     <Git />,
     <GitHub />,
     <Netlify />,

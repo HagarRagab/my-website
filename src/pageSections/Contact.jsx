@@ -2,6 +2,8 @@ import { useForm } from "react-hook-form";
 import { Filter } from "bad-words";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
+import { useAnimate, stagger } from "framer-motion";
+
 import styles from "./Contact.module.css";
 import Email from "../assets/icons/email.svg?react";
 import Button from "../components/Button";
@@ -19,6 +21,7 @@ function Contact({ isDarkMood }) {
         setError,
         reset,
     } = useForm();
+    const [scope, animate] = useAnimate();
 
     const filter = new Filter();
 
@@ -28,12 +31,12 @@ function Contact({ isDarkMood }) {
         const urlPattern =
             /(https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z0-9]{2,}(\.[a-zA-Z0-9]{2,})(\.[a-zA-Z0-9]{2,})?/g;
 
-        if (urlPattern.test(message) || filter.isProfane(message))
+        if (urlPattern.test(message) || filter.isProfane(message)) {
             setError("message", {
                 type: "manual",
                 message: "Your message contains forbidden content.",
             });
-        else {
+        } else {
             toast.promise(
                 async () => {
                     try {
@@ -52,7 +55,7 @@ function Contact({ isDarkMood }) {
                             throw new Error("Failed to send email");
                         reset();
                     } catch (error) {
-                        console.log(error);
+                        console.error(error);
                         throw new Error(error.message);
                     }
                 },
@@ -75,7 +78,7 @@ function Contact({ isDarkMood }) {
             </header>
             <main>
                 <div>
-                    <form onSubmit={handleSubmit(onSubmit)}>
+                    <form onSubmit={handleSubmit(onSubmit)} ref={scope}>
                         <div data-msg={errors?.name?.message}>
                             <input
                                 type="text"
@@ -83,11 +86,22 @@ function Contact({ isDarkMood }) {
                                 aria-label="Enter your name"
                                 autoComplete="off"
                                 disabled={isLoading}
+                                className="name"
                                 {...register("name", {
-                                    required: "This field is required",
-                                    validate: (value) =>
-                                        value.trim().length >= 3 ||
-                                        "Please add a valid name",
+                                    validate: (value) => {
+                                        if (value.trim().length < 3) {
+                                            animate(
+                                                ".name",
+                                                { x: [-10, 0, 10, 0] },
+                                                {
+                                                    type: "spring",
+                                                    duration: 0.3,
+                                                    delay: stagger(0.1),
+                                                }
+                                            );
+                                            return "Please add a valid name";
+                                        }
+                                    },
                                 })}
                             />
                         </div>
@@ -98,10 +112,24 @@ function Contact({ isDarkMood }) {
                                 aria-label="Enter your email"
                                 autoComplete="off"
                                 disabled={isLoading}
+                                className="email"
                                 {...register("email", {
-                                    required: "This field is required",
-                                    pattern:
-                                        /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/i,
+                                    validate: (value) => {
+                                        const regex =
+                                            /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/i;
+                                        if (!regex.test(value.trim())) {
+                                            animate(
+                                                ".email",
+                                                { x: [-10, 0, 10, 0] },
+                                                {
+                                                    type: "spring",
+                                                    duration: 0.3,
+                                                    delay: stagger(0.1),
+                                                }
+                                            );
+                                            return "Add valid email address";
+                                        }
+                                    },
                                 })}
                             />
                         </div>
@@ -112,10 +140,23 @@ function Contact({ isDarkMood }) {
                                 autoComplete="off"
                                 disabled={isLoading}
                                 {...register("message", {
-                                    required: "This field is required",
-                                    validate: (value) =>
-                                        value.trim().length >= 20 ||
-                                        "At least 20 characters",
+                                    validate: (value) => {
+                                        if (
+                                            value.trim().length < 20 ||
+                                            !value
+                                        ) {
+                                            animate(
+                                                "textarea",
+                                                { x: [-10, 0, 10, 0] },
+                                                {
+                                                    type: "spring",
+                                                    duration: 0.2,
+                                                    delay: stagger(0.05),
+                                                }
+                                            );
+                                            return "At least 20 characters";
+                                        }
+                                    },
                                 })}
                             />
                         </div>

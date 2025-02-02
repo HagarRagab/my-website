@@ -38,20 +38,3 @@
     top: 50%;
     transform: translateY(-50%);
 }
-
-.educationItem h3:not(.last)::after {
-    content: "";
-    width: 2px;
-    height: 12rem;
-    background-color: var(--yellow-color);
-    position: absolute;
-    left: -2.9rem;
-    top: 50%;
-}
-/* 
-@media (max-width: 576px) {
-    .educationItem h3::before,
-    .educationItem h3:not(.last)::after {
-        display: none;
-    }
-} */

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styles from "./Filter.module.css";
 
 const filterList = ["all", "html&css", "js", "react"];
@@ -11,8 +12,11 @@ function Filter({ sortBy, setSortBy, setPage }) {
     return (
         <ul className={styles.filter}>
             {filterList.map((list) => (
-                <li className={sortBy === list ? styles.active : ""} key={list}>
+                <li key={list}>
                     <button onClick={() => handleFilter(list)}>{list}</button>
+                    {sortBy === list && (
+                        <motion.span layoutId="active-indicator" />
+                    )}
                 </li>
             ))}
         </ul>
