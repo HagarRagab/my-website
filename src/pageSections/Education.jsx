@@ -10,7 +10,6 @@ import { hashImgs } from "../hashImgs";
 
 function Education({ isDarkMood }) {
     const [isShowMore, setIsShowMore] = useState(false);
-    const educationItems = isShowMore ? education : education.slice(0, 3);
     const { src, mobSrc, alt, hash } =
         hashImgs.education[isDarkMood ? "dark" : "light"];
 
@@ -20,7 +19,7 @@ function Education({ isDarkMood }) {
             <main>
                 <div>
                     <ul>
-                        {education.map((item, i) => {
+                        {education.slice(0, 3).map((item, i) => {
                             return (
                                 <EducationItem
                                     key={item.description}
@@ -38,7 +37,7 @@ function Education({ isDarkMood }) {
                                 exit={{ opacity: 0, height: 0 }}
                                 transition={{ duration: 0.5, type: "spring" }}
                             >
-                                {education.slice(0, 3).map((item, i) => {
+                                {education.map((item, i) => {
                                     return (
                                         <EducationItem
                                             key={item.description}

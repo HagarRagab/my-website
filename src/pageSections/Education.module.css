@@ -58,6 +58,10 @@
     object-fit: contain;
 }
 
+.education main > figure img {
+    position: sticky;
+}
+
 .education button {
     margin: 1rem;
 }
