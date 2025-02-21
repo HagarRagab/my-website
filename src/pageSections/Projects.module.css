@@ -40,6 +40,11 @@
 
 .projects main > button {
     position: absolute;
+    transition: transform var(--transition-duration);
+}
+
+.projects main > button:hover {
+    transform: scale(1.15);
 }
 
 @media (max-width: 768px) {

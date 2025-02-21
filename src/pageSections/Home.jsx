@@ -54,9 +54,15 @@ function Home({ isDarkMood }) {
                     modern design principles. A dedicated self-learner driven by
                     curiosity and innovation.
                 </p>
-                <div>
-                    <Button link="about" style="filled">
-                        Know More
+                <div className={styles.buttons}>
+                    <Button style="filled">
+                        <a
+                            href="https://drive.google.com/file/d/1XrOX-vtNylI10oFbnPc_DIoaoyRiwEXo/view?usp=sharing"
+                            target="_blank"
+                            className={styles.cvLink}
+                        >
+                            Show CV
+                        </a>
                     </Button>
                     <Button link="contact" style="outlined">
                         Contact Me

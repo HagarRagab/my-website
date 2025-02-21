@@ -4,8 +4,13 @@
     border: var(--border-md) solid var(--yellow-color);
     border-radius: 50%;
     box-shadow: var(--shadow-lg);
+    transition: trasform var(--transition-duration);
 }
 
 .bullet .active {
     background-color: var(--yellow-color);
+}
+
+.bullet:hover {
+    transform: scale(1.15);
 }

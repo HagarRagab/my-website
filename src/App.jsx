@@ -39,7 +39,7 @@ function App() {
             <Education isDarkMood={isDarkMood} />
             <LineSeparator />
             <Projects />
-            <LineSeparator />
+
             <Contact isDarkMood={isDarkMood} />
             <Footer />
             <NavBar onChangeMood={handleDarkMood} isDarkMood={isDarkMood} />
