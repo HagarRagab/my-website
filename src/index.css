@@ -2,7 +2,7 @@
 :root.light-mood {
     --light-color: #eeefe2;
     --main-color: #eeefe2;
-    --main-font-color: #211c2a;
+    --main-font-color: #080c17;
     --yellow-color: #ffaa15;
     --red-color: #b5252f;
 
@@ -14,7 +14,8 @@
     --backdrop-color: rgba(0, 0, 0, 0.4);
 
     --shadow-sm: 0 1px 2px rgba(44, 36, 59, 0.04);
-    --shadow-md: 0px 0.6rem 2.4rem rgba(44, 36, 59, 0.1);
+    /* --shadow-md: 0px 0.6rem 2.4rem rgba(44, 36, 59, 0.1); */
+    --shadow-md: 0px 4px 10px rgba(255, 255, 255, 0.1);
     --shadow-lg: 0 0 2rem 1px rgba(44, 36, 59, 0.2);
 
     --transition-duration: 0.3s;
@@ -23,7 +24,7 @@
 }
 
 :root.dark-mood {
-    --main-color: #211c2a;
+    --main-color: #080c17;
     --main-font-color: #eeefe2;
 
     --shadow-sm: 0 1px 2px rgba(238, 239, 226, 0.4);

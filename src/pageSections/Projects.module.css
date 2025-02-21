@@ -1,6 +1,7 @@
 .projects {
     min-height: 100vh;
     color: var(--main-font-color);
+    padding-bottom: 3rem;
 }
 
 .projects header {

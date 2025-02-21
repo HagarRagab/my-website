@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Toaster } from "react-hot-toast";
 import Home from "./pageSections/Home";
 import Header from "./pageSections/Header";
@@ -10,13 +10,20 @@ import Contact from "./pageSections/Contact";
 import Footer from "./pageSections/Footer";
 import NavBar from "./components/NavBar";
 import SideBullets from "./components/SideBullets";
+import LineSeparator from "./components/LineSeparator";
 
 function App() {
-    const [isDarkMood, setIsDarkMood] = useState(false);
+    const [isDarkMood, setIsDarkMood] = useState(
+        () => window.matchMedia("(prefers-color-scheme: dark)").matches
+    );
+
+    useEffect(() => {
+        const root = document.documentElement;
+        if (isDarkMood) root.classList.add("dark-mood");
+        else root.classList.remove("dark-mood");
+    }, [isDarkMood]);
 
     function handleDarkMood() {
-        const root = document.documentElement;
-        root.classList.toggle("dark-mood");
         setIsDarkMood((isDark) => !isDark);
     }
 
@@ -24,10 +31,15 @@ function App() {
         <>
             <Header isDarkMood={isDarkMood} />
             <Home isDarkMood={isDarkMood} />
+            <LineSeparator />
             <AboutMe isDarkMood={isDarkMood} />
+            <LineSeparator />
             <TechStack />
+            <LineSeparator />
             <Education isDarkMood={isDarkMood} />
+            <LineSeparator />
             <Projects />
+            <LineSeparator />
             <Contact isDarkMood={isDarkMood} />
             <Footer />
             <NavBar onChangeMood={handleDarkMood} isDarkMood={isDarkMood} />

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import { useMatchMedia } from "../hooks/useMatchMedia";
 import { projects } from "../projects";
 import styles from "./Projects.module.css";
