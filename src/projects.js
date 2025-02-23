@@ -197,8 +197,8 @@ export const projects = [
         hash: "LDDBt46D0F}NDiAL?F]x^aWYESoH",
         title: "FrontEnd quiz",
         description: "Quiz app frontend languages built with native JavaScript",
-        github: "",
-        live: "",
+        github: "https://github.com/HagarRagab/frontend-quiz",
+        live: "https://frontend-quizzz-app.netlify.app/",
     },
     {
         category: "js",
@@ -206,8 +206,8 @@ export const projects = [
         hash: "L36RM-_4Di%M%2t6%3-;00RP-poc",
         title: "Creative agency",
         description: "Landing page built with native JavaScript",
-        github: "https://github.com/HagarRagab/frontend-quiz",
-        live: "https://frontend-quizzz-app.netlify.app/",
+        github: "https://github.com/HagarRagab/creative-agency",
+        live: "https://creative-special-agency-page.netlify.app/",
     },
     {
         category: "js",
