@@ -1,3 +1,4 @@
+import reactSnapgram from "./assets/images/react-snapgram.webp";
 import reactProject1 from "./assets/images/react-1.webp";
 import reactProject2 from "./assets/images/react-2.webp";
 import reactProject3 from "./assets/images/react-3.webp";
@@ -29,6 +30,15 @@ import staticProject1 from "./assets/images/html-css-1.webp";
 import staticProject2 from "./assets/images/html-css-2.webp";
 
 export const projects = [
+    {
+        category: "react",
+        imgSrc: reactSnapgram,
+        hash: "L49jWP00yF~m01~KVgNFWsI8.TDh",
+        title: "Snapgram",
+        description: "Social media app built with React.js",
+        github: "https://github.com/HagarRagab/snapgram",
+        live: "https://snapgram-social-app.vercel.app/",
+    },
     {
         category: "react",
         imgSrc: reactProject1,
