@@ -37,7 +37,7 @@ export const projects = [
         title: "Snapgram",
         description: "Social media app built with React.js",
         github: "https://github.com/HagarRagab/snapgram",
-        live: "https://snapgram-social-app.vercel.app/",
+        live: "https://snapgram-sociall-app.vercel.app/",
     },
     {
         category: "react",
