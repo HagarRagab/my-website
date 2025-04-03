@@ -38,16 +38,7 @@ export const projects = [
         title: "Snapgram",
         description: "Social media app built with React.js",
         github: "https://github.com/HagarRagab/snapgram",
-        live: "https://snapgram-sociall-app.vercel.app/",
-    },
-    {
-        category: "react",
-        imgSrc: reactWildOasisWebsite,
-        hash: "L6PZfSi_.AyE_3t7t7R**0o#DgR4",
-        title: "The Wild Oasis website",
-        description: "Cabins & online reservations website built with Next.js",
-        github: "https://github.com/HagarRagab/the-wild-oasis-website",
-        live: "https://the-wild-oasis-official.vercel.app/",
+        live: "https://snapgram-sociall-app.vercel.app/signin",
     },
     {
         category: "react",
