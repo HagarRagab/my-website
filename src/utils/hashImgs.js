@@ -1,17 +1,17 @@
-import aboutMeImgLightMood from "./assets/images/about-me-light-mood.webp";
-import aboutMeImgDarkMood from "./assets/images/about-me-dark-mood.webp";
-import aboutMeImgLightMoodMobile from "./assets/images/about-me-light-mood-small.webp";
-import aboutMeImgDarkMoodMobile from "./assets/images/about-me-dark-mood-small.webp";
+import aboutMeImgLightMood from "../assets/images/about-me-light-mood.webp";
+import aboutMeImgDarkMood from "../assets/images/about-me-dark-mood.webp";
+import aboutMeImgLightMoodMobile from "../assets/images/about-me-light-mood-small.webp";
+import aboutMeImgDarkMoodMobile from "../assets/images/about-me-dark-mood-small.webp";
 
-import educationImgLightMood from "./assets/images/education-light-mood.webp";
-import educationImgDarkMood from "./assets/images/education-dark-mood.webp";
-import educationImgLightMoodMobile from "./assets/images/education-light-mood-small.webp";
-import educationImgDarkMoodMobile from "./assets/images/education-dark-mood-small.webp";
+import educationImgLightMood from "../assets/images/education-light-mood.webp";
+import educationImgDarkMood from "../assets/images/education-dark-mood.webp";
+import educationImgLightMoodMobile from "../assets/images/education-light-mood-small.webp";
+import educationImgDarkMoodMobile from "../assets/images/education-dark-mood-small.webp";
 
-import contactImgLightMood from "./assets/images/contact-light-mood.webp";
-import contactImgDarkMood from "./assets/images/contact-dark-mood.webp";
-import contactImgLightMoodMobile from "./assets/images/contact-light-mood-small.webp";
-import contactImgDarkMoodMobile from "./assets/images/contact-dark-mood-small.webp";
+import contactImgLightMood from "../assets/images/contact-light-mood.webp";
+import contactImgDarkMood from "../assets/images/contact-dark-mood.webp";
+import contactImgLightMoodMobile from "../assets/images/contact-light-mood-small.webp";
+import contactImgDarkMoodMobile from "../assets/images/contact-dark-mood-small.webp";
 
 export const hashImgs = {
     about: {

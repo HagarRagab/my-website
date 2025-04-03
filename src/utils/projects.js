@@ -1,33 +1,34 @@
-import reactSnapgram from "./assets/images/react-snapgram.webp";
-import reactProject1 from "./assets/images/react-1.webp";
-import reactProject2 from "./assets/images/react-2.webp";
-import reactProject3 from "./assets/images/react-3.webp";
-import reactProject4 from "./assets/images/react-4.webp";
-import reactProject5 from "./assets/images/react-5.webp";
-import reactProject6 from "./assets/images/react-6.webp";
-import reactProject7 from "./assets/images/react-7.webp";
-import reactProject8 from "./assets/images/react-8.webp";
-import reactProject9 from "./assets/images/react-9.webp";
-import reactProject10 from "./assets/images/react-10.webp";
-import reactProject11 from "./assets/images/react-11.webp";
-import reactProject12 from "./assets/images/react-12.webp";
+import reactSnapgram from "../assets/images/react-snapgram.webp";
+import reactWildOasisWebsite from "../assets/images/react-wild-oasis-website.webp";
+import reactProject1 from "../assets/images/react-1.webp";
+import reactProject2 from "../assets/images/react-2.webp";
+import reactProject3 from "../assets/images/react-3.webp";
+import reactProject4 from "../assets/images/react-4.webp";
+import reactProject5 from "../assets/images/react-5.webp";
+import reactProject6 from "../assets/images/react-6.webp";
+import reactProject7 from "../assets/images/react-7.webp";
+import reactProject8 from "../assets/images/react-8.webp";
+import reactProject9 from "../assets/images/react-9.webp";
+import reactProject10 from "../assets/images/react-10.webp";
+import reactProject11 from "../assets/images/react-11.webp";
+import reactProject12 from "../assets/images/react-12.webp";
 
-import jsProject1 from "./assets/images/js-1.webp";
-import jsProject2 from "./assets/images/js-2.webp";
-import jsProject3 from "./assets/images/js-3.webp";
-import jsProject4 from "./assets/images/js-4.webp";
-import jsProject5 from "./assets/images/js-5.webp";
-import jsProject6 from "./assets/images/js-6.webp";
-import jsProject7 from "./assets/images/js-7.webp";
-import jsProject8 from "./assets/images/js-8.webp";
-import jsProject9 from "./assets/images/js-9.webp";
-import jsProject10 from "./assets/images/js-10.webp";
-import jsProject11 from "./assets/images/js-11.webp";
-import jsProject12 from "./assets/images/js-12.webp";
-import jsProject13 from "./assets/images/js-13.webp";
+import jsProject1 from "../assets/images/js-1.webp";
+import jsProject2 from "../assets/images/js-2.webp";
+import jsProject3 from "../assets/images/js-3.webp";
+import jsProject4 from "../assets/images/js-4.webp";
+import jsProject5 from "../assets/images/js-5.webp";
+import jsProject6 from "../assets/images/js-6.webp";
+import jsProject7 from "../assets/images/js-7.webp";
+import jsProject8 from "../assets/images/js-8.webp";
+import jsProject9 from "../assets/images/js-9.webp";
+import jsProject10 from "../assets/images/js-10.webp";
+import jsProject11 from "../assets/images/js-11.webp";
+import jsProject12 from "../assets/images/js-12.webp";
+import jsProject13 from "../assets/images/js-13.webp";
 
-import staticProject1 from "./assets/images/html-css-1.webp";
-import staticProject2 from "./assets/images/html-css-2.webp";
+import staticProject1 from "../assets/images/html-css-1.webp";
+import staticProject2 from "../assets/images/html-css-2.webp";
 
 export const projects = [
     {
@@ -37,7 +38,16 @@ export const projects = [
         title: "Snapgram",
         description: "Social media app built with React.js",
         github: "https://github.com/HagarRagab/snapgram",
-        live: "https://snapgram-social-app.vercel.app/",
+        live: "https://snapgram-sociall-app.vercel.app/",
+    },
+    {
+        category: "react",
+        imgSrc: reactWildOasisWebsite,
+        hash: "L6PZfSi_.AyE_3t7t7R**0o#DgR4",
+        title: "The Wild Oasis website",
+        description: "Cabins & online reservations website built with Next.js",
+        github: "https://github.com/HagarRagab/the-wild-oasis-website",
+        live: "https://the-wild-oasis-official.vercel.app/",
     },
     {
         category: "react",

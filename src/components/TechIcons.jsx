@@ -1,4 +1,4 @@
-import { techIcons } from "../techIcons";
+import { techIcons } from "../utils/techIcons";
 import { Fragment } from "react";
 
 function TechIcons() {

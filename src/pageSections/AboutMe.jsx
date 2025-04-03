@@ -1,7 +1,7 @@
 import styles from "./AboutMe.module.css";
 import Section from "../components/Section";
 import ImageComponent from "../components/ImageComponent";
-import { hashImgs } from "../hashImgs";
+import { hashImgs } from "../utils/hashImgs";
 
 function AboutMe({ isDarkMood }) {
     const { src, mobSrc, alt, hash } =

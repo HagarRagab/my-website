@@ -1,4 +1,4 @@
-import { pageSections } from "../pageSections";
+import { pageSections } from "../utils/pageSections";
 import NavLink from "./NavLink";
 import styles from "./SideBullets.module.css";
 

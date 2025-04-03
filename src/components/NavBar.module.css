@@ -71,7 +71,7 @@
 .navBar svg,
 .navMobile svg {
     width: 1.4rem;
-    fill: var(--light-color);
+    fill: var(--main-color);
     transition: fill var(--transition-duration);
 }
 

@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import styles from "./Education.module.css";
-import { education } from "../education";
+import { education } from "../utils/education";
 import Button from "../components/Button";
 import EducationItem from "../components/EducationItem";
 import Section from "../components/Section";
 import ImageComponent from "../components/ImageComponent";
-import { hashImgs } from "../hashImgs";
+import { hashImgs } from "../utils/hashImgs";
 
 function Education({ isDarkMood }) {
     const [isShowMore, setIsShowMore] = useState(false);

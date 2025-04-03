@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useMatchMedia } from "../hooks/useMatchMedia";
-import { projects } from "../projects";
+import { projects } from "../utils/projects";
 import styles from "./Projects.module.css";
 import ProjectItem from "../components/ProjectItem";
 import Section from "../components/Section";
