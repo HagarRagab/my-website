@@ -2,7 +2,7 @@
     display: none;
     align-items: center;
     justify-content: center;
-    background-color: var(--green-color);
+    background-color: var(--secondary-color);
     border-radius: 0 50px 50px 0;
     padding: 0.8rem;
     position: fixed;
@@ -21,7 +21,7 @@
     position: fixed;
     height: 85vh;
     max-height: 45rem;
-    background-color: var(--green-color);
+    background-color: var(--secondary-color);
     top: 50%;
     transform: translateY(-50%);
     border-radius: 999rem;
@@ -71,7 +71,7 @@
 .navBar svg,
 .navMobile svg {
     width: 1.4rem;
-    fill: var(--main-color);
+    fill: var(--light-color);
     transition: fill var(--transition-duration);
 }
 
@@ -80,7 +80,7 @@
     height: 85vh;
     max-height: 45rem;
     background-color: var(--light-color);
-    color: var(--green-color);
+    color: var(--secondary-color);
     text-wrap: nowrap;
     padding: 1.8rem 0.9rem 1.8rem 3rem;
     position: fixed;
@@ -99,7 +99,7 @@
 }
 
 .openedMenu svg {
-    fill: var(--green-color);
+    fill: var(--secondary-color);
 }
 
 .openedMenu ul {

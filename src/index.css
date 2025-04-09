@@ -7,7 +7,7 @@
     --dark-yellow-color: #e0930e;
     --red-color: #b5252f;
 
-    --green-color: #707c5e;
+    --secondary-color: #707c5e;
     --transparent-green-color: rgba(112, 124, 94, 0.1);
     --transparent-blue-color: rgba(44, 36, 59, 0.3);
     --transparent-light-color: rgba(238, 239, 226, 0.4);
@@ -27,7 +27,6 @@
 :root.dark-mood {
     --main-color: #080c17;
     --main-font-color: #eeefe2;
-    --green-color: #eeefe2;
 
     --shadow-sm: 0 1px 2px rgba(238, 239, 226, 0.4);
     --shadow-md: 0px 0.6rem 1rem rgba(238, 239, 226, 0.08);
