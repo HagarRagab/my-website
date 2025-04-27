@@ -46,7 +46,7 @@ function Home({ isDarkMood }) {
     return (
         <Section id="home" className={styles.home}>
             <motion.div className={styles.text} style={{ x: xText, opacity }}>
-                <h1>Hi, I’m Hagar Ragab</h1>
+                <h1>Hi, I&apos;m Hagar Ragab</h1>
                 <h2>Frontend Developer</h2>
                 <p>
                     Front-End Developer (React.js). Passionate about crafting
@@ -57,7 +57,7 @@ function Home({ isDarkMood }) {
                 <div className={styles.buttons}>
                     <Button style="filled">
                         <a
-                            href="https://drive.google.com/file/d/1XrOX-vtNylI10oFbnPc_DIoaoyRiwEXo/view?usp=sharing"
+                            href="https://drive.google.com/file/d/1KQB4_vxT0xETdnoAr0JsTAF3gCYlrDuR/view?usp=sharing"
                             target="_blank"
                             className={styles.cvLink}
                         >
