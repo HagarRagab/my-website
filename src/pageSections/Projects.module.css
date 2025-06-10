@@ -1,12 +1,14 @@
 .projects {
+    width: 100%;
     min-height: 100vh;
     color: var(--main-font-color);
     padding-bottom: 3rem;
 }
 
 .projects header {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin: 0 3rem 1.4rem;
 }
@@ -36,10 +38,11 @@
 
 .projects main {
     position: relative;
+    display: flex;
+    gap: 1rem;
 }
 
 .projects main > button {
-    position: absolute;
     transition: transform var(--transition-duration);
 }
 
@@ -72,17 +75,47 @@
     top: 50%;
 }
 
-.projects main > div {
-    min-height: 30rem;
+.projects main .projectsContainer {
+    width: calc(100vw - 18rem);
+    max-width: 80rem;
+    height: 35rem;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    margin-inline: auto;
+}
+
+.projects main .projectsContainer > div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
     gap: 1rem;
-    margin: 0 3rem 2rem;
+    transition: var(--transition-duration);
+    padding-inline: 1rem;
 }
 
 @media (max-width: 768px) {
-    .projects main > div {
-        margin: 0 1rem 2rem;
+    .projects main .projectsContainer {
+        width: calc(100vw - 10rem);
+    }
+
+    .projects main .projectsContainer > div {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .projects main .projectsContainer {
+        width: 100vw;
     }
 }

@@ -2,6 +2,7 @@
     color: var(--main-font-color);
     text-align: center;
     padding: 3rem 0 3rem;
+    max-width: 100vw;
 }
 
 @media (max-width: 768px) {

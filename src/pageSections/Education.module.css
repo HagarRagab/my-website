@@ -14,7 +14,7 @@
     justify-content: space-between;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .education main {
         grid-template-columns: 1fr;
         justify-items: center;
@@ -45,7 +45,7 @@
     margin-inline: auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .education main > figure {
         max-width: 24rem;
         grid-row: 1 / 2;

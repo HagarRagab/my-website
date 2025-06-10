@@ -1,5 +1,11 @@
 .section {
-    padding: 3rem 4rem 0 7rem;
+    max-width: 100rem;
+    padding: 0 4rem 0 7rem;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (max-width: 576px) {

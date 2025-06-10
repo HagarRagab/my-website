@@ -10,7 +10,7 @@ function ProjectItem({ project }) {
                 <ImageComponent src={imgSrc} alt={`${title} app`} hash={hash} />
                 <figcaption>
                     <h3>{title}</h3>
-                    <p>{description}</p>
+                    <p className={styles.description}>{description}</p>
                     <div>
                         <a href={github} target="_blank">
                             Github

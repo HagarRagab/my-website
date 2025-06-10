@@ -1,8 +1,10 @@
 .separator {
     width: 80%;
-    height: 0.2px;
+    height: 1px;
     margin-inline: auto;
+    margin-block: 1rem;
     position: relative;
+    z-index: 20;
 }
 
 .separator div {

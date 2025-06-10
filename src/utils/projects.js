@@ -1,5 +1,7 @@
+import nextProject1 from "../assets/images/next-1-wild-oasis.webp";
+import nextProject2 from "../assets/images/next-2-cartsy.webp";
+
 import reactSnapgram from "../assets/images/react-snapgram.webp";
-import reactWildOasisWebsite from "../assets/images/react-wild-oasis-website.webp";
 import reactProject1 from "../assets/images/react-1.webp";
 import reactProject2 from "../assets/images/react-2.webp";
 import reactProject3 from "../assets/images/react-3.webp";
@@ -32,6 +34,24 @@ import staticProject2 from "../assets/images/html-css-2.webp";
 
 export const projects = [
     {
+        category: "next.js",
+        imgSrc: nextProject2,
+        hash: "L2Q,Bx.A58Ze00x^DjRj00IU9FRj",
+        title: "Cartsy - shopping website",
+        description: "A full-stack e-commerce application",
+        github: "https://github.com/HagarRagab/cartsy",
+        live: "https://cartsy-xi.vercel.app/",
+    },
+    {
+        category: "next.js",
+        imgSrc: nextProject1,
+        hash: "LJDJCg~VI;NG_3-o%1fk4:IVs.xZ",
+        title: "The Wild Oasis website",
+        description: "Cabins & online reservations built with Next.js",
+        github: "https://github.com/HagarRagab/the-wild-oasis-website",
+        live: "https://the-wild-oasis-official.vercel.app/",
+    },
+    {
         category: "react",
         imgSrc: reactSnapgram,
         hash: "L49jWP00yF~m01~KVgNFWsI8.TDh",
@@ -39,15 +59,6 @@ export const projects = [
         description: "Social media app built with React.js",
         github: "https://github.com/HagarRagab/snapgram",
         live: "https://snapgram-sociall-app.vercel.app",
-    },
-    {
-        category: "react",
-        imgSrc: reactWildOasisWebsite,
-        hash: "LvL4$%j[~qxuj[ofWCRj?bRjM{of",
-        title: "The Wild Oasis website",
-        description: "Cabins & online reservations built with Next.js",
-        github: "https://github.com/HagarRagab/the-wild-oasis-website",
-        live: "https://the-wild-oasis-official.vercel.app/",
     },
     {
         category: "react",

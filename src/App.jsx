@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Toaster } from "react-hot-toast";
 import Home from "./pageSections/Home";
-import Header from "./pageSections/Header";
+
 import AboutMe from "./pageSections/AboutMe";
 import TechStack from "./pageSections/TechStack";
 import Education from "./pageSections/Education";
@@ -13,9 +13,7 @@ import SideBullets from "./components/SideBullets";
 import LineSeparator from "./components/LineSeparator";
 
 function App() {
-    const [isDarkMood, setIsDarkMood] = useState(
-        () => window.matchMedia("(prefers-color-scheme: dark)").matches
-    );
+    const [isDarkMood, setIsDarkMood] = useState(false);
 
     useEffect(() => {
         const root = document.documentElement;
@@ -29,7 +27,6 @@ function App() {
 
     return (
         <>
-            <Header isDarkMood={isDarkMood} />
             <Home isDarkMood={isDarkMood} />
             <LineSeparator />
             <AboutMe isDarkMood={isDarkMood} />
@@ -39,7 +36,7 @@ function App() {
             <Education isDarkMood={isDarkMood} />
             <LineSeparator />
             <Projects />
-
+            <LineSeparator />
             <Contact isDarkMood={isDarkMood} />
             <Footer />
             <NavBar onChangeMood={handleDarkMood} isDarkMood={isDarkMood} />

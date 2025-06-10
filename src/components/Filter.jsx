@@ -1,9 +1,7 @@
 import { motion } from "framer-motion";
 import styles from "./Filter.module.css";
 
-const filterList = ["all", "html&css", "js", "react"];
-
-function Filter({ sortBy, setSortBy, setPage }) {
+function Filter({ sortBy, setSortBy, setPage, filterList }) {
     function handleFilter(list) {
         setSortBy(list);
         setPage(1);

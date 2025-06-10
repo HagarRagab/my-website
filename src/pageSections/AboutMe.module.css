@@ -13,6 +13,8 @@
     aspect-ratio: 1/1;
     border-radius: 50%;
     overflow: hidden;
+    margin-inline: auto;
+    margin-block: 1rem;
 }
 
 .aboutMe figure * {
