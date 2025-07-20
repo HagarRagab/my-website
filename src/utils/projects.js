@@ -1,6 +1,7 @@
 import nextProject1 from "../assets/images/next-1-wild-oasis.webp";
 import nextProject2 from "../assets/images/next-2-cartsy.webp";
 
+import reactFridgePal from "../assets/images/react-fridgepal.webp";
 import reactSnapgram from "../assets/images/react-snapgram.webp";
 import reactProject1 from "../assets/images/react-1.webp";
 import reactProject2 from "../assets/images/react-2.webp";
@@ -50,6 +51,15 @@ export const projects = [
         description: "Cabins & online reservations built with Next.js",
         github: "https://github.com/HagarRagab/the-wild-oasis-website",
         live: "https://the-wild-oasis-official.vercel.app/",
+    },
+    {
+        category: "react",
+        imgSrc: reactFridgePal,
+        hash: "L2Ke=TM2k:%M00tkRjt700.kkDtQ",
+        title: "FridgePal",
+        description: "Smart Grocery Tracker",
+        github: "https://github.com/HagarRagab/fridgePal",
+        live: "https://fridge-pal-eight.vercel.app/",
     },
     {
         category: "react",
