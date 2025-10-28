@@ -37,7 +37,7 @@ function Education({ isDarkMood }) {
                                 exit={{ opacity: 0, height: 0 }}
                                 transition={{ duration: 0.5, type: "spring" }}
                             >
-                                {education.map((item, i) => {
+                                {education.slice(3).map((item, i) => {
                                     return (
                                         <EducationItem
                                             key={item.description}

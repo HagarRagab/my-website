@@ -8,6 +8,8 @@ This **Personal Website** is a **single-page application (SPA)** built with **Re
 
 [click here](https://hagar-ragab.netlify.app/)
 
+![preview image](public/preview.jpg)
+
 ### **Features & Sections**
 
 1. **Personal Introduction:**

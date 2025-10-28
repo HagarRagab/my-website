@@ -1,11 +1,5 @@
 export const education = [
     {
-        date: "July 2019",
-        title: "Bachelor’s Degree",
-        description:
-            "Bachelor’s Degree in architecture from Faculty of Engineering, Alexandria University.",
-    },
-    {
         date: "January 2022",
         title: "Egypt FWD",
         description: "The web development challenger track.",
@@ -35,5 +29,10 @@ export const education = [
         date: "November 2024",
         title: "Udemy",
         description: "The complete React course - Jonas schmedtmann.",
+    },
+    {
+        date: "October 2025",
+        title: "Huma Volve",
+        description: "The frontend training program.",
     },
 ];
