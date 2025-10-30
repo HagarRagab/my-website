@@ -2,10 +2,10 @@
     max-width: 25rem;
     transition: var(--transition-duration);
     padding: 1rem;
-    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border-left: 2px solid var(--yellow-color);
 }
 
 @media (max-width: 992px) {
@@ -34,7 +34,7 @@
     background-color: var(--yellow-color);
     border-radius: 50%;
     position: absolute;
-    left: -3.2rem;
+    left: -1.4rem;
     top: 50%;
     transform: translateY(-50%);
 }

@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { useMatchMedia } from "../hooks/useMatchMedia";
-import { projects } from "../utils/projects";
+import { projects, projectsCategories } from "../utils/projects";
 import styles from "./Projects.module.css";
 import ProjectItem from "../components/ProjectItem";
 import Section from "../components/Section";
@@ -16,10 +16,7 @@ function Projects() {
     const matches = useMatchMedia("(max-width: 992px)");
     const numProjectsPerPage = matches ? 3 : 6;
 
-    const filterList = [
-        "all",
-        ...new Set(projects.map((project) => project.category)),
-    ];
+    const filterList = ["all", ...projectsCategories];
 
     const sortedProjects =
         sortBy !== "all"
@@ -51,6 +48,7 @@ function Projects() {
                 <div className={styles.projectsContainer}>
                     {Array.from({ length: numPages }, (_, i) => (
                         <div
+                            key={i}
                             style={{
                                 transform: `translateX(${
                                     (i + 1 - page) * 100

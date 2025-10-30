@@ -10,32 +10,24 @@
 
 .education main {
     display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+.education main > div ul {
+    display: grid;
     grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
     justify-content: space-between;
-}
-
-@media (max-width: 992px) {
-    .education main {
-        grid-template-columns: 1fr;
-        justify-items: center;
-    }
-}
-
-.education main > div {
-    max-width: 28rem;
-    margin-left: 4.4rem;
+    /* margin-left: 4.4rem; */
     position: relative;
 }
 
-.education main > div::before {
-    content: "";
-    width: 2px;
-    height: calc(100% - 5rem);
-    background-color: var(--yellow-color);
-    position: absolute;
-    left: -1.9rem;
-    top: 50%;
-    transform: translateY(-50%);
+@media (max-width: 768px) {
+    .education main > div ul {
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
 }
 
 .education main > figure {
@@ -63,5 +55,7 @@
 }
 
 .education button {
-    margin: 1rem;
+    grid-column: 1/-1;
+    margin-block: 2rem 1rem;
+    margin-inline: auto;
 }

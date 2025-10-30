@@ -17,47 +17,6 @@ function Education({ isDarkMood }) {
         <Section id="education" className={styles.education}>
             <h2>Education</h2>
             <main>
-                <div>
-                    <ul>
-                        {education.slice(0, 3).map((item, i) => {
-                            return (
-                                <EducationItem
-                                    key={item.description}
-                                    item={item}
-                                    isLastItem={education.length - 1 === i}
-                                />
-                            );
-                        })}
-                    </ul>
-                    <AnimatePresence>
-                        {isShowMore && (
-                            <motion.ul
-                                initial={{ opacity: 0, height: 0 }}
-                                animate={{ opacity: 1, height: "auto" }}
-                                exit={{ opacity: 0, height: 0 }}
-                                transition={{ duration: 0.5, type: "spring" }}
-                            >
-                                {education.slice(3).map((item, i) => {
-                                    return (
-                                        <EducationItem
-                                            key={item.description}
-                                            item={item}
-                                            isLastItem={
-                                                education.length - 1 === i
-                                            }
-                                        />
-                                    );
-                                })}
-                            </motion.ul>
-                        )}
-                    </AnimatePresence>
-                    <Button
-                        style="filled"
-                        onClick={() => setIsShowMore((isShow) => !isShow)}
-                    >
-                        {isShowMore ? "Show Less" : "Show More"}
-                    </Button>
-                </div>
                 <figure>
                     <ImageComponent
                         src={src}
@@ -66,6 +25,39 @@ function Education({ isDarkMood }) {
                         hash={hash}
                     />
                 </figure>
+                <div>
+                    <ul>
+                        {!isShowMore
+                            ? education.slice(0, 4).map((item, i) => {
+                                  return (
+                                      <EducationItem
+                                          key={item.description}
+                                          item={item}
+                                          isLastItem={
+                                              education.length - 1 === i
+                                          }
+                                      />
+                                  );
+                              })
+                            : education.map((item, i) => {
+                                  return (
+                                      <EducationItem
+                                          key={item.description}
+                                          item={item}
+                                          isLastItem={
+                                              education.length - 1 === i
+                                          }
+                                      />
+                                  );
+                              })}
+                    </ul>
+                    <Button
+                        style="filled"
+                        onClick={() => setIsShowMore((isShow) => !isShow)}
+                    >
+                        {isShowMore ? "Show Less" : "Show More"}
+                    </Button>
+                </div>
             </main>
         </Section>
     );
