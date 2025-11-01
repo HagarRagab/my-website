@@ -1,5 +1,6 @@
 // Contribution
 import onlineBookingDoctors from "../assets/images/onlinebookingdoctors.png";
+import nexacode from "../assets/images/nexacode.jpg";
 
 // Next.js
 import wildOasisWeb from "../assets/images/next-1-wild-oasis.webp";
@@ -52,11 +53,20 @@ export const projects = [
     {
         category: "contribution",
         imgSrc: onlineBookingDoctors,
-        hash: "L2Q,Bx.A58Ze00x^DjRj00IU9FRj",
+        hash: "L7S?DWog~p%M-payNHa#-:j[D*WB",
         title: "Cure - online booking doctors",
         description: "A full-stack online booking doctors application",
         github: "https://github.com/Nexa-Code1/Cure_FE",
         live: "https://onlinebookingdoctor.netlify.app/",
+    },
+    {
+        category: "contribution",
+        imgSrc: nexacode,
+        hash: "L16*gr-q004n009Y?c~p~q?IM_01",
+        title: "nexacode - business website",
+        description: "Tech company landing page",
+        github: "https://github.com/Nexa-Code1/Nexa-Code-Website",
+        live: "https://nexacode-tech.netlify.app/",
     },
     {
         category: "next.js",
