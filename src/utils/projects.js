@@ -33,9 +33,7 @@ import frontEndQuiz from "../assets/images/js-7.webp";
 import creativeAgency from "../assets/images/js-8.webp";
 import pinkGame from "../assets/images/js-9.webp";
 import rockPaperScissors from "../assets/images/js-10.webp";
-import videoPlayer from "../assets/images/js-11.webp";
 import guessTheNumber from "../assets/images/js-12.webp";
-import currencyConvertor from "../assets/images/js-13.webp";
 
 // HTML&CSS
 import nikeWebsite from "../assets/images/html-css-1.webp";
@@ -304,30 +302,12 @@ export const projects = [
     },
     {
         category: "js",
-        imgSrc: videoPlayer,
-        hash: "LTK-qQof~qf6ofayayj[~qay9Fj[",
-        title: "Video player",
-        description: "Customized video player built with native JavaScript",
-        github: "https://github.com/HagarRagab/customized-video-player",
-        live: "https://customized-video.netlify.app/",
-    },
-    {
-        category: "js",
         imgSrc: guessTheNumber,
         hash: "L47-Zw_34noL~qxuV@?bxu-;?bxu",
         title: "Guess the number",
         description: "One player game built with native JavaScript",
         github: "https://github.com/HagarRagab/guess-number",
         live: "https://whats-my-number.netlify.app/",
-    },
-    {
-        category: "js",
-        imgSrc: currencyConvertor,
-        hash: "L2TI,a-;~qxu?bj[t7ay~qWB4nt7",
-        title: "Currency convertor",
-        description: "Currency convertor app built with native JavaScript",
-        github: "https://github.com/HagarRagab/Currency-API",
-        live: "https://currency-convertor-calc.netlify.app/",
     },
     {
         category: "html&css",
