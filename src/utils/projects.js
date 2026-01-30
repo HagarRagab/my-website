@@ -1,4 +1,5 @@
 // Contribution
+import byWay from "../assets/images/by-way-frontend.vercel.app_.webp";
 import onlineBookingDoctors from "../assets/images/onlinebookingdoctors.png";
 import nexacode from "../assets/images/nexacode.jpg";
 
@@ -48,6 +49,15 @@ export const projectsCategories = [
 ];
 
 export const projects = [
+    {
+        category: "contribution",
+        imgSrc: byWay,
+        hash: "LBK_B]E1%M?a00IoMx%2~qt7M{NG",
+        title: "ByWay - online courses platform",
+        description: "A full-stack online booking doctors application",
+        github: "https://github.com/Nexa-Code1/ByWay",
+        live: "https://by-way-frontend.vercel.app/",
+    },
     {
         category: "contribution",
         imgSrc: onlineBookingDoctors,

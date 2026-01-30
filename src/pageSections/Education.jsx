@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import styles from "./Education.module.css";
 import { education } from "../utils/education";
 import Button from "../components/Button";
@@ -15,7 +14,7 @@ function Education({ isDarkMood }) {
 
     return (
         <Section id="education" className={styles.education}>
-            <h2>Education</h2>
+            <h2>Experience & Education</h2>
             <main>
                 <figure>
                     <ImageComponent

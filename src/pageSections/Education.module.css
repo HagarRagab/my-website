@@ -1,6 +1,7 @@
 .education {
     min-height: 100vh;
     color: var(--main-font-color);
+    margin-top: 4rem;
 }
 
 .education h2 {

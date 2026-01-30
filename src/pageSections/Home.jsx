@@ -29,8 +29,17 @@ const homeImgs = {
 function Home({ isDarkMood }) {
     const { src, mobSrc, alt } = homeImgs[isDarkMood ? "dark" : "light"];
     const matches = useMatchMedia("(max-width: 768px)");
+
     const { scrollY } = useScroll();
+
+    // Fade
     const opacity = useTransform(scrollY, [0, 300, 500], [1, 0.6, 0]);
+
+    // 🔥 Scroll Zoom
+    const scale = useTransform(scrollY, [0, 500], [1.15, 1]);
+
+    // Optional parallax
+    const y = useTransform(scrollY, [0, 500], [0, 120]);
 
     useEffect(() => {
         const link = document.createElement("link");
@@ -46,20 +55,21 @@ function Home({ isDarkMood }) {
     return (
         <Section id="home">
             <Header isDarkMood={isDarkMood} />
+
             <div className={styles.home}>
-                <motion.div className={styles.text} style={{ opacity }}>
+                <motion.div className={styles.text} style={{ opacity, y }}>
                     <h1>Hi, I&apos;m Hagar Ragab</h1>
                     <h2>Frontend Developer</h2>
                     <p>
                         Front-End Developer (React.js). Passionate about
                         crafting seamless user experiences with a focus on
-                        performance and modern design principles. A dedicated
-                        self-learner driven by curiosity and innovation.
+                        performance and modern design principles.
                     </p>
+
                     <div className={styles.buttons}>
                         <Button style="filled">
                             <a
-                                href="https://drive.google.com/file/d/1KQB4_vxT0xETdnoAr0JsTAF3gCYlrDuR/view?usp=sharing"
+                                href="https://drive.google.com/file/d/1KQB4_vxT0xETdnoAr0JsTAF3gCYlrDuR/view"
                                 target="_blank"
                                 className={styles.cvLink}
                             >
@@ -70,9 +80,19 @@ function Home({ isDarkMood }) {
                             Contact Me
                         </Button>
                     </div>
+
                     <ButtonsIcon />
                 </motion.div>
-                <motion.picture style={{ opacity }}>
+
+                {/* 🔥 Scroll Zoom Hero */}
+                <motion.picture
+                    style={{
+                        scale,
+                        opacity,
+                        y,
+                        transformOrigin: "center",
+                    }}
+                >
                     <source srcSet={mobSrc} media="(max-width: 768px)" />
                     <source srcSet={src} />
                     <img src={src} alt={alt} />
