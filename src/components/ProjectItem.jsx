@@ -1,3 +1,4 @@
+import { urlFor } from "../utils/helper";
 import ImageComponent from "./ImageComponent";
 import styles from "./ProjectItem.module.css";
 
@@ -7,7 +8,11 @@ function ProjectItem({ project }) {
     return (
         <div className={styles.projectItem}>
             <figure>
-                <ImageComponent src={imgSrc} alt={`${title} app`} hash={hash} />
+                <ImageComponent
+                    src={urlFor(imgSrc)}
+                    alt={`${title} app`}
+                    hash={hash}
+                />
                 <figcaption>
                     <h3>{title}</h3>
                     <p className={styles.description}>{description}</p>
